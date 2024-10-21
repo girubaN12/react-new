@@ -1,0 +1,151 @@
+/* Reset some default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: grid !important;
+  place-items: normal !important;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+/* Style the navbar to be full width */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: beige;
+  color: green;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.navbar .logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family:monospace;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 2rem;
+  cursor: pointer;
+  font-size:20px;
+}
+
+.nav-item:hover {
+  color: #ddd;
+}
+
+/* Hamburger icon - hidden on large screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+.mainframe {
+  text-align: center;
+  margin: 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width:50vw;
+  height: 70vh;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  gap:15px;
+}
+.profile-image{
+  border-radius: 35px;
+  height:350px;
+}
+
+
+.contact-info {
+  margin-top: 10px;
+  width:500px;
+  height:350px;
+  border-radius: 10px;
+  padding:20px;
+  background-color:white;
+  line-height: 3;
+  border-radius: 35px;
+}
+.footer {
+  background-color: beige;
+  color: green;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size:20px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  margin: 0 10px; /* Space between icons */
+  color: #333; /* Change this to your preferred color */
+  text-decoration: none; /* Remove underline */
+  font-size: 24px; /* Size of the icons */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-media a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
